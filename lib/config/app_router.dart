@@ -1,6 +1,7 @@
-import 'package:arrow_dating_app/screens/home/home_screen.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+
+import '../screens/screens.dart';
 
 
 class AppRouter {

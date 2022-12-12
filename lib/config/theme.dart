@@ -1,12 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 ThemeData theme() {
   return ThemeData(
-    primaryColor:const Color(0xFF2B2E4A),
+    primaryColor: const Color(0xFF2B2E4A),
     scaffoldBackgroundColor: Colors.white,
-    backgroundColor:const  Color(0xFFF4F4F4),
-
+    backgroundColor: const Color(0xFFF4F4F4),
     fontFamily: 'Optima',
+    
+    appBarTheme: const AppBarTheme(
+      systemOverlayStyle: SystemUiOverlayStyle(
+        statusBarColor: Colors.white,
+        statusBarIconBrightness: Brightness.dark, // For Android (dark icons)
+        statusBarBrightness: Brightness.light, // For iOS (dark icons)
+      ),
+    ),
+
     textTheme: const TextTheme(
       headline1: TextStyle(
         color: Color(0xFF2B2E4A),
@@ -48,6 +57,9 @@ ThemeData theme() {
         fontWeight: FontWeight.normal,
         fontSize: 10,
       ),
-    ), colorScheme: ColorScheme.fromSwatch().copyWith(secondary: const Color(0xFFE84545)),
+    ),
+    colorScheme: ColorScheme.fromSwatch().copyWith(
+      secondary: const Color(0xFFE84545),
+    ),
   );
 }
