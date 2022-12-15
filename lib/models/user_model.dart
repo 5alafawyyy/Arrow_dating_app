@@ -97,7 +97,7 @@ class User extends Equatable {
       name: 'Mohamed',
       age: 26,
       imageUrls: [
-        'https://avatars.githubusercontent.com/u/54222207?v=4',
+        'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60',
         'https://avatars.githubusercontent.com/u/54222207?v=4'
       ],
       jobTitle: 'Web Developer',
@@ -108,7 +108,7 @@ class User extends Equatable {
       name: 'Ramy',
       age: 27,
       imageUrls: [
-        'https://avatars.githubusercontent.com/u/54222207?v=4',
+        'https://images.unsplash.com/photo-1542596768-5d1d21f1cf98?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60',
         'https://avatars.githubusercontent.com/u/54222207?v=4'
       ],
       jobTitle: 'Petroleum Engineer',
@@ -119,7 +119,7 @@ class User extends Equatable {
       name: 'Samy',
       age: 50,
       imageUrls: [
-        'https://avatars.githubusercontent.com/u/54222207?v=4',
+        'https://images.unsplash.com/photo-1531384441138-2736e62e0919?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTJ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
         'https://avatars.githubusercontent.com/u/54222207?v=4'
       ],
       jobTitle: 'Petroleum Engineer',
@@ -130,7 +130,7 @@ class User extends Equatable {
       name: 'Rania',
       age: 20,
       imageUrls: [
-        'https://avatars.githubusercontent.com/u/54222207?v=4',
+        'https://images.unsplash.com/photo-1534614971-6be99a7a3ffd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
         'https://avatars.githubusercontent.com/u/54222207?v=4'
       ],
       jobTitle: 'Petroleum Engineer',
