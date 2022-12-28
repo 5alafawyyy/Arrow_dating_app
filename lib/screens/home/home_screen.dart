@@ -3,7 +3,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../models/user_model.dart';
 import '../../widgets/widgets.dart';
+import '../screens.dart';
 
 class HomeScreen extends StatelessWidget {
   static const String routeName = '/';
@@ -33,30 +35,39 @@ class HomeScreen extends StatelessWidget {
             return SingleChildScrollView(
               child: Column(
                 children: [
-                  Draggable(
-                    data: state.users,
-                    feedback: UserCard(user: state.users[0]),
-                    childWhenDragging: (state.users.length > 1)
-                        ? UserCard(user: state.users[1])
-                        : Container(),
-                    onDragEnd: ((drag) {
-                      if (drag.velocity.pixelsPerSecond.dx < 0) {
-                        context
-                            .read<SwipeBloc>()
-                            .add(SwipeLeftEvent(user: state.users[0]));
-                        if (kDebugMode) {
-                          print('Swiped left');
+                  InkWell(
+                    onDoubleTap: () {
+                      Navigator.pushNamed(
+                        context,
+                        UsersScreen.routeName,
+                        arguments: state.users[0],
+                      );
+                    },
+                    child: Draggable<User>(
+                      data: state.users[0],
+                      feedback: UserCard(user: state.users[0]),
+                      childWhenDragging: (state.users.length > 1)
+                          ? UserCard(user: state.users[1])
+                          : Container(),
+                      onDragEnd: ((drag) {
+                        if (drag.velocity.pixelsPerSecond.dx < 0) {
+                          context
+                              .read<SwipeBloc>()
+                              .add(SwipeLeftEvent(user: state.users[0]));
+                          if (kDebugMode) {
+                            print('Swiped left');
+                          }
+                        } else {
+                          context
+                              .read<SwipeBloc>()
+                              .add(SwipeLeftEvent(user: state.users[0]));
+                          if (kDebugMode) {
+                            print('Swiped right');
+                          }
                         }
-                      } else {
-                        context
-                            .read<SwipeBloc>()
-                            .add(SwipeLeftEvent(user: state.users[0]));
-                        if (kDebugMode) {
-                          print('Swiped right');
-                        }
-                      }
-                    }),
-                    child: UserCard(user: state.users[0]),
+                      }),
+                      child: UserCard(user: state.users[0]),
+                    ),
                   ),
 
                   // Choises Buttons
@@ -78,11 +89,7 @@ class HomeScreen extends StatelessWidget {
                             }
                           },
                           child: ChoiseButton(
-                            height: 60.r,
-                            width: 60.r,
-                            size: 25.r,
                             color: Theme.of(context).colorScheme.secondary,
-                            hasGradient: false,
                             icon: Icons.clear_rounded,
                           ),
                         ),
@@ -107,11 +114,7 @@ class HomeScreen extends StatelessWidget {
                         InkWell(
                           onTap: () {},
                           child: ChoiseButton(
-                            height: 60.r,
-                            width: 60.r,
-                            size: 25.r,
                             color: Theme.of(context).primaryColor,
-                            hasGradient: false,
                             icon: Icons.watch_later,
                           ),
                         ),

@@ -1,8 +1,8 @@
+import 'package:arrow_dating_app/models/models.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import '../screens/screens.dart';
-
 
 class AppRouter {
   static Route onGenerateRoute(RouteSettings settings) {
@@ -19,7 +19,7 @@ class AppRouter {
       case SplashScreen.routeName:
         return SplashScreen.route();
       case UsersScreen.routeName:
-        return UsersScreen.route();
+        return UsersScreen.route(user: settings.arguments as User);
       case OnboardingScreen.routeName:
         return OnboardingScreen.route();
       case MatchesScreen.routeName:
@@ -35,8 +35,8 @@ class AppRouter {
 
   static Route _errorRoute() {
     return MaterialPageRoute(
-      builder: (_) => Scaffold(appBar: AppBar(title:const  Text('error'))),
-      settings:const  RouteSettings(name: '/error'),
+      builder: (_) => Scaffold(appBar: AppBar(title: const Text('error'))),
+      settings: const RouteSettings(name: '/error'),
     );
   }
 }

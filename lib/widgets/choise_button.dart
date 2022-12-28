@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ChoiseButton extends StatelessWidget {
   final double width;
@@ -10,19 +11,19 @@ class ChoiseButton extends StatelessWidget {
 
   const ChoiseButton({
     super.key,
-    required this.width,
-    required this.height,
-    required this.size,
+    this.width = 60,
+    this.height = 60,
+    this.size = 25,
     required this.color,
-    required this.hasGradient,
+    this.hasGradient = false,
     required this.icon,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: height,
-      width: width,
+      height: height.r,
+      width: width.r,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         color: Colors.white,
@@ -51,7 +52,7 @@ class ChoiseButton extends StatelessWidget {
       child: Icon(
         icon,
         color: color,
-        size: size,
+        size: size.r,
       ),
     );
   }

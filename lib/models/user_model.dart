@@ -8,6 +8,7 @@ class User extends Equatable {
   final String name;
   final int age;
   final List<String> imageUrls;
+  final List<String> interests;
   final String jobTitle;
   final String bio;
 
@@ -16,6 +17,7 @@ class User extends Equatable {
     required this.name,
     required this.age,
     required this.imageUrls,
+    required this.interests,
     required this.jobTitle,
     required this.bio,
   });
@@ -26,6 +28,7 @@ class User extends Equatable {
       'name': name,
       'age': age,
       'imageUrls': imageUrls,
+      'interests': interests,
       'jobTitle': jobTitle,
       'bio': bio,
     };
@@ -37,6 +40,7 @@ class User extends Equatable {
       name: map['name'] as String,
       age: map['age'] as int,
       imageUrls: List<String>.from((map['imageUrls'] as List<String>)),
+      interests: List<String>.from((map['interests'] as List<String>)),
       jobTitle: map['jobTitle'] as String,
       bio: map['bio'] as String,
     );
@@ -54,6 +58,7 @@ class User extends Equatable {
       name,
       age,
       imageUrls,
+      interests,
       jobTitle,
       bio,
     ];
@@ -64,6 +69,7 @@ class User extends Equatable {
     String? name,
     int? age,
     List<String>? imageUrls,
+    List<String>? interests,
     String? jobTitle,
     String? bio,
   }) {
@@ -72,6 +78,7 @@ class User extends Equatable {
       name: name ?? this.name,
       age: age ?? this.age,
       imageUrls: imageUrls ?? this.imageUrls,
+      interests: interests ?? this.interests,
       jobTitle: jobTitle ?? this.jobTitle,
       bio: bio ?? this.bio,
     );
@@ -89,8 +96,14 @@ class User extends Equatable {
         'https://avatars.githubusercontent.com/u/54222207?v=4',
         'https://avatars.githubusercontent.com/u/54222207?v=4'
       ],
+      interests: [
+        'Music',
+        'Programming',
+        'Football',
+      ],
       jobTitle: 'Flutter Developer',
-      bio: 'Flutter Developer',
+      bio:
+          'Flutter Developer Flutter Developer Flutter Developer Flutter Developer Flutter Developer Flutter Developer Flutter Developer Flutter Developer ',
     ),
     User(
       id: 2,
@@ -100,8 +113,14 @@ class User extends Equatable {
         'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60',
         'https://avatars.githubusercontent.com/u/54222207?v=4'
       ],
+      interests: [
+        'Music',
+        'Programming',
+        'Football',
+      ],
       jobTitle: 'Web Developer',
-      bio: 'Web Developer',
+      bio:
+          'Web Developer Web Developer Web Developer Web Developer Web Developer Web Developer Web Developer Web Developer Web Developer Web Developer Web Developer Web Developer ',
     ),
     User(
       id: 3,
@@ -111,8 +130,14 @@ class User extends Equatable {
         'https://images.unsplash.com/photo-1542596768-5d1d21f1cf98?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60',
         'https://avatars.githubusercontent.com/u/54222207?v=4'
       ],
+      interests: [
+        'Music',
+        'Programming',
+        'Football',
+      ],
       jobTitle: 'Petroleum Engineer',
-      bio: 'Petroleum Engineer',
+      bio:
+          'Petroleum Engineer Petroleum Engineer Petroleum Engineer Petroleum Engineer Petroleum Engineer Petroleum Engineer Petroleum Engineer Petroleum Engineer Petroleum Engineer',
     ),
     User(
       id: 4,
@@ -122,8 +147,15 @@ class User extends Equatable {
         'https://images.unsplash.com/photo-1531384441138-2736e62e0919?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTJ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
         'https://avatars.githubusercontent.com/u/54222207?v=4'
       ],
-      jobTitle: 'Petroleum Engineer',
-      bio: 'Trader',
+      interests: [
+        'Music',
+        'Programming',
+        'Football',
+        'Football',
+      ],
+      jobTitle: 'Trader',
+      bio:
+          'Petroleum Engineer Petroleum Engineer Petroleum Engineer Petroleum Engineer Petroleum Engineer Petroleum Engineer Petroleum Engineer Petroleum Engineer Petroleum Engineer ',
     ),
     User(
       id: 5,
@@ -133,8 +165,14 @@ class User extends Equatable {
         'https://images.unsplash.com/photo-1534614971-6be99a7a3ffd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
         'https://avatars.githubusercontent.com/u/54222207?v=4'
       ],
-      jobTitle: 'Petroleum Engineer',
-      bio: 'Teacher',
+      interests: [
+        'Music',
+        'Programming',
+        'Football',
+      ],
+      jobTitle: 'Teacher',
+      bio:
+          'Petroleum Engineer Petroleum Engineer Petroleum Engineer Petroleum Engineer Petroleum Engineer Petroleum Engineer Petroleum Engineer Petroleum Engineer Petroleum Engineer Petroleum Engineer Petroleum Engineer Petroleum Engineer Petroleum Engineer ',
     ),
   ];
 }
