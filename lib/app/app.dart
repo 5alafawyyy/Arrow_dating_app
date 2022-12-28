@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
             title: "ARROW",
             theme: theme(),
             onGenerateRoute: AppRouter.onGenerateRoute,
-            initialRoute: HomeScreen.routeName,
+            initialRoute: OnboardingScreen.routeName,
           );
         }),
       ),

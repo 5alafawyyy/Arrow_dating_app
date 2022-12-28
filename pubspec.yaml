@@ -85,7 +85,6 @@ flutter:
           weight: 600
         - asset: assets\fonts\OptimaLTPro-Medium.otf
           weight: 500
-
   # fonts:
   #   - family: Schyler
   #     fonts:
