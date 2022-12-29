@@ -87,14 +87,10 @@ class UserCard extends StatelessWidget {
                                 scrollDirection: Axis.horizontal,
                                 child: Row(
                                   children: [
-                                    UserImageSmall(
-                                        imageUrl: user.imageUrls[0]),
-                                    UserImageSmall(
-                                        imageUrl: user.imageUrls[0]),
-                                    UserImageSmall(
-                                        imageUrl: user.imageUrls[0]),
-                                    UserImageSmall(
-                                        imageUrl: user.imageUrls[0]),
+                                    UserImage.small(url: user.imageUrls[0]),
+                                    UserImage.small(url: user.imageUrls[0]),
+                                    UserImage.small(url: user.imageUrls[0]),
+                                    UserImage.small(url: user.imageUrls[0]),
                                   ],
                                 ),
                               ),

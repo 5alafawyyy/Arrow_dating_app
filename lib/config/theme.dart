@@ -7,6 +7,7 @@ ThemeData theme() {
     primaryColor: const Color(0xFF2B2E4A),
     scaffoldBackgroundColor: Colors.white,
     backgroundColor: const Color(0xFFF4F4F4),
+    splashColor: const Color(0xFFE84545),
     fontFamily: 'Optima',
     appBarTheme: const AppBarTheme(
       systemOverlayStyle: SystemUiOverlayStyle(

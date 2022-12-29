@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 import '../widgets/widgets.dart';
+import '../../../widgets/widgets.dart';
 
 class Pictures extends StatelessWidget {
   final TabController tabController;
